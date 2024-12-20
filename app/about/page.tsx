@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-gray-100 pt-24 pb-12">
+    <main className="min-h-screen bg-gradient-to-b from-[#161E46] to-[#000108] pt-24 pb-12">
       <div className="container mx-auto px-4 space-y-16">
         <motion.section
           initial={{ opacity: 0, y: 20 }}

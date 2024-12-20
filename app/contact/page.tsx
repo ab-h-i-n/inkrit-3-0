@@ -1,39 +1,39 @@
 "use client";
-import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
-import { Phone } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import { Phone } from "lucide-react";
 
 const organizers = [
   {
     name: "John Doe",
     role: "Event Head",
     image: "/organizers/john.jpg",
-    phone: "+91 9876543210"
+    phone: "+91 9876543210",
   },
   {
     name: "Jane Smith",
     role: "Technical Head",
     image: "/organizers/jane.jpg",
-    phone: "+91 9876543211"
+    phone: "+91 9876543211",
   },
   {
     name: "Dr. Robert Brown",
     role: "Faculty Coordinator",
     image: "/organizers/robert.jpg",
-    phone: "+91 9876543212"
-  }
+    phone: "+91 9876543212",
+  },
 ];
 
 export default function ContactPage() {
   const handleWhatsAppClick = (phone: string) => {
-    window.open(`https://wa.me/${phone.replace(/\s+/g, '')}`, '_blank');
+    window.open(`https://wa.me/${phone.replace(/\s+/g, "")}`, "_blank");
   };
 
   return (
-    <main className="min-h-screen bg-gray-100 pt-24 pb-12">
+    <main className="min-h-screen bg-gradient-to-b from-[#161E46] to-[#000108] pt-24 pb-12">
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold mb-8 text-center">Contact Us</h1>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {organizers.map((organizer, index) => (
             <motion.div
