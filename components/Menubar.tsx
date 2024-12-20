@@ -30,22 +30,25 @@ function Menubar({ isSheetOpen, setIsSheetOpen }: MenubarProps) {
     <div>
       <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
         <SheetContent side="right" className="w-[60%]">
-          <ul className="flex flex-col gap-8 font-bold">
-            {menuItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className={`hover:text-[#5B56A1] ${
-                    pathname === item.href
-                      ? "font-bold underline text-[#5B56A1]"
-                      : ""
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <SheetTitle className="hidden">Menubar</SheetTitle>
+          <SheetDescription>
+            <ul className="flex flex-col gap-8 font-bold">
+              {menuItems.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className={`hover:text-[#5B56A1] ${
+                      pathname === item.href
+                        ? "font-bold underline text-[#5B56A1]"
+                        : ""
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </SheetDescription>
         </SheetContent>
       </Sheet>
     </div>
