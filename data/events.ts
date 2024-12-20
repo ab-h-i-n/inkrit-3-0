@@ -10,6 +10,7 @@ export interface Event {
   eventCoordinators: Coordinator[];
   staffCoordinators: Coordinator[];
   registrationLink: string;
+  rules: string[];
 }
 
 interface Coordinator {
@@ -34,7 +35,14 @@ export const events: Event[] = [
     staffCoordinators: [
       { name: "Dr. Robert Brown", phone: "+91 9876543212" }
     ],
-    registrationLink: "https://forms.google.com/coding-marathon"
+    registrationLink: "https://forms.google.com/coding-marathon",
+    rules: [
+      "Teams must consist of 2-4 members",
+      "All code must be original and written during the event",
+      "Use of AI tools is permitted but must be disclosed",
+      "Final submission must include source code and documentation",
+      "Projects must solve a real-world problem"
+    ]
   },
   {
     id: "hackathon",
@@ -51,6 +59,13 @@ export const events: Event[] = [
     staffCoordinators: [
       { name: "Dr. Sarah Wilson", phone: "+91 9876543214" }
     ],
-    registrationLink: "https://forms.google.com/hackathon"
+    registrationLink: "https://forms.google.com/hackathon",
+    rules: [
+      "Individual participation only",
+      "Participants must bring their own laptops",
+      "Internet access will be provided",
+      "Pre-built templates are not allowed",
+      "Judging criteria: Innovation, Technical Complexity, and Presentation"
+    ]
   }
 ];
