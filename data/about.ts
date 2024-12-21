@@ -1,42 +1,17 @@
 export const aboutData = {
   fest: {
-    title: "About Inkrit 3.0",
-    description: "Inkrit is the annual technical festival of the Department of Computer Applications, bringing together the brightest minds to compete, learn, and innovate.",
-    vision: "To foster innovation and technical excellence among students",
-    highlights: [
-      "24-hour Coding Challenges",
-      "Technical Workshops",
-      "Industry Expert Sessions",
-      "Networking Opportunities"
-    ]
+    title: "Inkrit 3.0",
+    description:
+      " INKRIT 3.0 is the technical fest hosted by the Department of Computer Applications, MES College Marampally. INKRIT 3.0 is aimed at promoting the ideas and concepts developed by young techies and strives to be a platform where you can showcase your true potential. ",
   },
   college: {
-    name: "Example Institute of Technology",
-    description: "A premier institution dedicated to excellence in technical education since 1990.",
-    achievements: [
-      "NAAC 'A' Grade Accreditation",
-      "NBA Accredited Programs",
-      "Top 50 Technical Institutions in India"
-    ]
+    name: "MES College Marampally",
+    description:
+      "We are an established institution for the past 30 years with a student count of nearly 3000 in under graduate and post graduate courses as well as over 145 faculties and other managerial staffs.",
   },
   department: {
     name: "Department of Computer Applications",
-    description: "Nurturing technical talent and innovation since 1995.",
-    programs: [
-      "Master of Computer Applications",
-      "Bachelor of Computer Applications"
-    ],
-    faculty: [
-      {
-        name: "Dr. James Wilson",
-        designation: "Head of Department",
-        specialization: "Artificial Intelligence"
-      },
-      {
-        name: "Dr. Emily Brown",
-        designation: "Professor",
-        specialization: "Data Science"
-      }
-    ]
-  }
+    description:
+      "The Department of Computer Applications was established to meet the demand for well-qualified computer professionals and was conceived in the year 1995. Department offers three programs named BCA, MSc. Computer Science and PhD in Computer Science and Allied areas of Electronics. Most of the students passed out are well placed or have opted for higher studies.",
+  },
 };

@@ -1,42 +1,33 @@
 "use client";
-import { Button } from '@/components/ui/button'
-import { motion } from 'framer-motion'
+import Menu from "@/components/Menu";
+import RetroGrid from "@/components/ui/retro-grid";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#161E46] to-[#000108]">
-      <section className="relative h-screen flex items-center justify-center">
-        <div className="container mx-auto px-4 text-center">
-          <motion.h1 
-            className="text-6xl md:text-8xl font-bold text-[#CFD0EA] mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Inkrit 3.0
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl text-[#5B56A1] mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-          >
-            Annual Technical Festival of Department of Computer Applications
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-          >
-            <Button 
-              size="lg" 
-              className="bg-[#5B56A1] text-[#CFD0EA] hover:bg-[#161E46]"
-            >
-              Explore Events
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+    <main className="h-[100dvh] bg-[#1d024f] flex flex-col justify-center items-center z0">
+      <RetroGrid
+        lightLineColor="white"
+        darkLineColor="black"
+        className="w-full h-full "
+      />
+
+      <Image
+        src={"/assets/abstract element.png"}
+        width={3000}
+        height={3000}
+        alt="abstract"
+        className="absolute top-1/2 -translate-y-1/2 z-0"
+      />
+
+      <motion.div className="text-white font-ahsing text-[7rem] leading-[80px] z-10">
+        INKRIT
+      </motion.div>
+      <motion.div className="text-white font-ahsing text-[3rem] leading-[30px] z-10">
+        3.0
+      </motion.div>
+      <Menu />
     </main>
   );
 }
