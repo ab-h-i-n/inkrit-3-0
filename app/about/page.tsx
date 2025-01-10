@@ -1,18 +1,16 @@
 "use client";
-import Menu from "@/components/Menu";
 import BoxReveal from "@/components/ui/box-reveal";
 import { aboutData } from "@/data/about";
 import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-[100vh] overflow-y-scroll bg-[#1d024f] pt-20 pb-12">
-      <Menu />
+    <main className="min-h-[100vh] overflow-y-scroll pt-20 pb-12 relative bg-black">
       <div className="container mx-auto px-6 space-y-8">
-        <div className="font-poppinsBold text-[2.5rem] font-bold text-white text-center">
+        <div className="font-ahsing text-[2.5rem] font-bold text-white text-center">
           About Us
         </div>
-        <div className="divide-y divide-white/70 space-y-4">
+        <div className="divide-y divide-white/70 space-y-4 font-poppinsRegular">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

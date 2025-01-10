@@ -3,7 +3,7 @@ import { events } from "@/data/events";
 import EventCard from "@/components/events/EventCard";
 import Menu from "@/components/Menu";
 
-export default function EventsPage() {
+export default function page() {
   return (
     <main className="min-h-screen bg-black pb-12">
       <Menu />
