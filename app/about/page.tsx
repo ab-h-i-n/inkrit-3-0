@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function AboutPage() {
   return (
-    <main className="h-dvh overflow-y-scroll bg-[#1d024f] pt-20 pb-12">
+    <main className="min-h-[100vh] overflow-y-scroll bg-[#1d024f] pt-20 pb-12">
       <Menu />
       <div className="container mx-auto px-6 space-y-8">
         <div className="font-poppinsBold text-[2.5rem] font-bold text-white text-center">
