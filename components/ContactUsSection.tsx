@@ -64,7 +64,7 @@ const ContactUsSection = () => {
         {/* title  */}
         <div className="text-center">
           <p className="text-sm text-white/70 capitalize">
-            Department of computer applications presents
+            Department of computer applications <br className="sm:hidden"/> presents
           </p>
           <h1 className="text-white font-ahsing text-5xl sm:text-6xl">INKRIT 3.0</h1>
         </div>

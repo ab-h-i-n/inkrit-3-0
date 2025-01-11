@@ -7,18 +7,19 @@ export default function AboutUsSection() {
   return (
     <main className="min-h-[100vh] overflow-y-scroll pt-20 pb-12 relative bg-black">
       <div className="container mx-auto px-6 space-y-8">
-        <BoxReveal boxColor="white">
-          <div className="font-ahsing text-[2.5rem] font-bold text-white text-center">
-            About Us
-          </div>
-        </BoxReveal>
+        <div className="font-ahsing text-[2.5rem] font-bold text-white flex justify-center">
+          <BoxReveal boxColor="white">
+            <>About Us</>
+          </BoxReveal>
+        </div>
+
         <div className="divide-y divide-white/70 space-y-4 font-poppinsRegular">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl text-white font-bold mb-4 font-poppinsBold">
+            <h2 className="text-3xl text-white font-bold mb-4">
               {aboutData.fest.title}
             </h2>
             <p className="text-white/50 mb-4 font-poppinsBold text-justify">

@@ -1,6 +1,6 @@
 export const aboutData = {
   fest: {
-    title: "Inkrit 3.0",
+    title: "INKRIT 3.0",
     description:
       " INKRIT 3.0 is the technical fest hosted by the Department of Computer Applications, MES College Marampally. INKRIT 3.0 is aimed at promoting the ideas and concepts developed by young techies and strives to be a platform where you can showcase your true potential. ",
   },
