@@ -3,7 +3,7 @@ import BoxReveal from "@/components/ui/box-reveal";
 import { aboutData } from "@/data/about";
 import { motion } from "framer-motion";
 
-export default function AboutPage() {
+export default function AboutUsSection() {
   return (
     <main className="min-h-[100vh] overflow-y-scroll pt-20 pb-12 relative bg-black">
       <div className="container mx-auto px-6 space-y-8">

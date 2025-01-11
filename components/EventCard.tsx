@@ -18,12 +18,12 @@ function EventCard() {
 
   return (
     <div className="relative">
-      <Carousel className="w-full flex justify-center items-center py-20 px-10">
+      <Carousel  className="w-full flex justify-center items-center px-10">
         <CarouselContent>
           {events.map((event) => (
             <CarouselItem
               key={event.id}
-              className="h-[400px] flex flex-col justify-center gap-4"
+              className="h-[400px] flex flex-col justify-center gap-5 md:basis-1/3"
             >
               <h3 className="font-bold text-xl text-left">{event.title}</h3>
               <div className="w-full h-0.5 bg-white"></div>

@@ -5,6 +5,7 @@ export interface Sponsor {
   description: string;
   website: string;
   type: string;
+  tier: string;
 }
 
 export const sponsors: Sponsor[] = [

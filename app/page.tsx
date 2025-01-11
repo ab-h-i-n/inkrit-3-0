@@ -1,11 +1,12 @@
 "use client";
 import HeroSection from "@/components/HeroSection";
-import AboutPage from "./about/page";
 import EventsSection from "@/components/EventsSection";
 import Particles from "@/components/ui/particles";
 import AbstractImage from "@/components/AbstractImage";
 import React from "react";
 import SponsorSection from "@/components/SponsorSection";
+import ContactUsSection from "@/components/ContactUsSection";
+import AboutUsSection from "@/components/AboutUsSection";
 
 export default function Home() {
   const pageRef = React.useRef(null);
@@ -24,8 +25,9 @@ export default function Home() {
       <AbstractImage pageRef={pageRef} />
       <HeroSection />
       <EventsSection />
-      <AboutPage />
+      <AboutUsSection />
       <SponsorSection />
+      <ContactUsSection />
 
       {/* <Menu /> */}
     </main>
