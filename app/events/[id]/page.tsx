@@ -30,7 +30,7 @@ export default function EventDetailsPage() {
     <main className="min-h-screen bg-black divide-y divide-white font-poppinsRegular relative">
       <div className="w-full h-[300px]  text-white flex justify-center items-center">
         <span
-          onClick={() => router.back()}
+          onClick={() => router.replace("/")}
           className="font-ahsing text-5xl relative"
         >
           <BoxReveal boxColor="white">
