@@ -10,6 +10,7 @@ export interface Event {
   staffCoordinators: Coordinator[];
   registrationLink: string;
   rules: string[];
+  poster : string;
 }
 
 interface Coordinator {
@@ -21,6 +22,7 @@ export const events: Event[] = [
   {
     id: "hackathon",
     title: "Hackathon",
+    poster : '/posters/hackathon.jpeg',
     description:
       "Join us for an electrifying 24-hour hackathon at Inkrit 3.0! This ultimate coding marathon invites tech enthusiasts, developers, and innovators to showcase their skills, creativity, and teamwork. Over the span of 24 hours, participants will ideate, design, and develop cutting-edge solutions to real-world challenges.",
     date: "06 February 2025",
@@ -52,6 +54,7 @@ export const events: Event[] = [
   {
     id: "css-battle",
     title: "CSS Battle",
+    poster : '/posters/css-battle.jpeg',
     description:
       "Get ready to unleash your CSS skills in the thrilling CSS Battle at Inkrit 3.0! Participants will face the ultimate front-end design challenge where precision and creativity collide. Your mission? Replicate given layouts as accurately as possible using only HTML and CSS.",
     date: "06 February 2025",
@@ -80,6 +83,7 @@ export const events: Event[] = [
   {
     id: "prompting",
     title: "Prompting",
+    poster : '/posters/prompting.jpeg',
     description:
       "Step into the world of creativity with the Prompting Competition at Inkrit 3.0! In this unique challenge, participants will be tasked with crafting innovative and effective prompts that will drive powerful AI-generated results. Your objective is to write clear, concise, and creative prompts that yield the most accurate, relevant, and imaginative responses from an AI.",
     date: "07 February 2025",
@@ -108,6 +112,7 @@ export const events: Event[] = [
   {
     id: "debugging",
     title: "Debugging",
+    poster : '/posters/debugging.jpeg',
     description:
       "Gear up for the ultimate test of your problem-solving and debugging skills with the Debugging Competition at Inkrit 3.0! In this high-stakes challenge, participants will be given code with intentional bugs, errors, or inefficiencies. Your task is to identify and fix these issues as quickly as possible to ensure the code runs smoothly.",
     date: "06 February 2025",
@@ -136,6 +141,7 @@ export const events: Event[] = [
   {
     id: "escape-room",
     title: "Escape room",
+    poster : '/posters/escape-room.jpeg',
     description:
       "Get ready for a mind-bending challenge with the Escape Room Coding Competition at Inkrit 3.0! In this unique twist on the classic escape room, participants must crack codes, solve coding challenges, and uncover hidden hints to unlock the next level. Each puzzle will test your coding skills, problem-solving ability, and creativity as you work against the clock to uncover clues and ultimately escape.",
     date: "07 February 2025",

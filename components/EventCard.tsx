@@ -1,63 +1,73 @@
 "use client";
 import React from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { events } from "@/data/events";
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { Event } from "@/data/events";
+import { Calendar, Clock } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-function EventCard() {
-  const router = useRouter(); //  the router
-
-  // Ensuring the component is rendered on the client side
-  
-
+function EventCard({ event }: { event: Event }) {
+  const router = useRouter();
   return (
-    <div className="relative">
-      <Carousel  className="w-full flex justify-center items-center px-10">
-        <CarouselContent>
-          {events.map((event) => (
-            <CarouselItem
-              key={event.id}
-              className="h-[400px] flex flex-col justify-center gap-5 md:basis-1/3"
-            >
-              <h3 className="font-bold text-xl text-left">{event.title}</h3>
-              <div className="w-full h-0.5 bg-white"></div>
-              <div className="[&_p]:text-white/80">
-                <p>
-                  <span>Entry fee : </span>
-                  <span className="text-orange-600">{event.entryFee}</span>
-                </p>
-                <p>
-                  <span>Prizes worth : </span>
-                  <span className="text-orange-600">{event.prizePool}</span>
-                </p>
-                <p>
-                  <span>Date : </span>
-                  <span>{event.date}</span>
-                </p>
-                <p>
-                  <span>Time : </span>
-                  <span>{event.time}</span>
-                </p>
-              </div>
-              <div className="w-full h-0.5 bg-white"></div>
-              <button
-                className="border p-3 border-white"
-                onClick={() => router.push(`/events/${event.id}`)} // Trigger navigation on click
-              >
-                View Details
-              </button>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="absolute left-1 top-1/2 transform -translate-y-1/2 text-white" />
-        <CarouselNext className="absolute right-1 top-1/2 transform -translate-y-1/2 text-white" />
-      </Carousel>
+    <div className="grid justify-items-center sm:grid-cols-2 sm:justify-content-center sm:gap-10">
+      <motion.div
+        onClick={() => router.push(`/events/${event.id}`)}
+        className="relative h-[270px] sm:h-[450px] aspect-[3.8/5] rounded overflow-hidden cursor-pointer"
+        initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        viewport={{ amount: 0.5 }}
+        exit={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        transition={{
+          duration: 0.5,
+          stiffness: 500,
+          damping: 20,
+          type: "spring",
+        }}
+      >
+        <Image src={event.poster} alt={event.title} fill />
+      </motion.div>
+      <motion.div
+        className="pt-5 grid justify-items-center sm:place-content-center"
+        initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        exit={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        transition={{
+          duration: 0.5,
+          stiffness: 500,
+          damping: 20,
+          type: "spring",
+          delay: 0.2,
+        }}
+      >
+        <h1 className="text-5xl font-ahsing sm:text-[4rem]">{event.title}</h1>
+
+        <div className="flex items-center justify-between gap-10 mt-5">
+          <div className="text-sm font-poppinsRegular grid justify-items-center">
+            <span className="text-lg sm:text-xl">Prize Pool</span>
+            <span className="font-bold text-3xl sm:text-4xl">
+              {event.prizePool}
+            </span>
+          </div>
+          <div className="text-sm font-poppinsRegular grid justify-items-center">
+            <span className="text-lg sm:text-xl">Entry Fee</span>
+            <span className="font-bold text-3xl sm:text-4xl">
+              {event.entryFee}
+            </span>
+          </div>
+        </div>
+
+        {/* date time  */}
+        <div className="mt-3">
+          <div className="flex items-center justify-center text-sm gap-1">
+            <Calendar size={18} />
+            <span>{event.date}</span>
+          </div>
+          <div className="flex items-center justify-center text-sm gap-1 mt-2">
+            <Clock size={18} />
+            <span>{event.time}</span>
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
