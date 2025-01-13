@@ -8,7 +8,7 @@ import LoadingPage from "@/components/LoadingPage";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Inkrit 3.0 - Tech Fest",
+  title: "Inkrit 3.0",
   description:
     "Annual Technical Festival of Department of Computer Applications",
   icons: "/assets/abstract element.png",

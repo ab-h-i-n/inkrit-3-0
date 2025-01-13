@@ -3,7 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import React from "react";
 
-const AbstractImage = ({ pageRef } : { pageRef : any }) => {
+const AbstractImage = ({ pageRef }: { pageRef: any }) => {
   const { scrollYProgress } = useScroll({
     target: pageRef,
   });
@@ -13,9 +13,9 @@ const AbstractImage = ({ pageRef } : { pageRef : any }) => {
   return (
     <motion.div
       style={{
-        scale: scale
+        scale: scale,
       }}
-      className="fixed top-[35%] left-[28%] sm:left-[43%]  aspect-square w-[200px] "
+      className="fixed top-[35%] left-[24%] sm:left-[43%]  aspect-square w-[200px] lg:left-[40%] xl:left-[42%]"
     >
       <Image
         src={"/assets/abstract element.png"}
