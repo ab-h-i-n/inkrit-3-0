@@ -18,7 +18,7 @@ export interface Event {
   };
 }
 
-interface Coordinator {
+export interface Coordinator {
   name: string;
   phone: string;
 }

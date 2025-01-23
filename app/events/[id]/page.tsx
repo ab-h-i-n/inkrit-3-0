@@ -1,18 +1,17 @@
-import { events } from "@/data/events";
+import { Coordinator, fetchEvents } from "@/data/events";
 import Menu from "@/components/Menu";
 import Link from "next/link";
-import { Box, ChevronLeft } from "lucide-react";
+import {  ChevronLeft } from "lucide-react";
 import BoxReveal from "@/components/ui/box-reveal";
 
-export async function generateStaticParams() {
-  return events.map((event) => ({
-    id: event.id,
-  }));
-}
-
-export default async function EventDetailsPage({ params }: { params: { id: string } }) {
+export default async function EventDetailsPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const { id } = params;
-  const event = events.find((e) => e.id === id);
+  const events = await fetchEvents();
+  const event = events.find((e: { id: string }) => e.id === id);
 
   if (!event) {
     return (
@@ -66,7 +65,7 @@ export default async function EventDetailsPage({ params }: { params: { id: strin
         {/* rules */}
         <ul className="text-white list-disc list-inside pt-10">
           <h3 className="text-xl font-bold">Rules</h3>
-          {event.rules.map((rule, index) => (
+          {event.rules.map((rule: string, index: number) => (
             <li key={index} className="font-light text-white/70">
               {rule}
             </li>
@@ -78,7 +77,7 @@ export default async function EventDetailsPage({ params }: { params: { id: strin
           <BoxReveal boxColor="white">
             <div>
               <h4 className="text-xl font-bold">Student Coordinators</h4>
-              {event.eventCoordinators.map((coordinator) => (
+              {event.eventCoordinators.map((coordinator: Coordinator) => (
                 <Link
                   href={`tel:${coordinator.phone}`}
                   key={coordinator.phone}
@@ -89,22 +88,20 @@ export default async function EventDetailsPage({ params }: { params: { id: strin
               ))}
             </div>
           </BoxReveal>
-          <div>
-            <BoxReveal boxColor="white">
-              <>
-                <h4 className="text-xl font-bold pt-10">Staff Coordinators</h4>
-                {event.staffCoordinators.map((coordinator) => (
-                  <Link
-                    href={`tel:${coordinator.phone}`}
-                    key={coordinator.phone}
-                    className="block text-white/70"
-                  >
-                    {coordinator.name} - {coordinator.phone}
-                  </Link>
-                ))}
-              </>
-            </BoxReveal>
-          </div>
+          <BoxReveal boxColor="white">
+            <>
+              <h4 className="text-xl font-bold pt-10">Staff Coordinators</h4>
+              {event.staffCoordinators.map((coordinator: Coordinator) => (
+                <Link
+                  href={`tel:${coordinator.phone}`}
+                  key={coordinator.phone}
+                  className="block text-white/70"
+                >
+                  {coordinator.name} - {coordinator.phone}
+                </Link>
+              ))}
+            </>
+          </BoxReveal>
         </div>
         <Link
           href={event.registrationLink}
