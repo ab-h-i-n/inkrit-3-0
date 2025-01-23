@@ -19,10 +19,10 @@ export default function AboutUsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl text-white font-bold mb-4">
+            <h2 className="text-2xl sm:text-3xl text-white font-bold mb-4">
               {aboutData.fest.title}
             </h2>
-            <p className="text-white/50 mb-4 font-poppinsBold text-justify">
+            <p className="text-white/50 mb-4 font-poppinsBold text-justify text-sm sm:text-base">
               {aboutData.fest.description}
             </p>
           </motion.div>
@@ -33,10 +33,10 @@ export default function AboutUsSection() {
             transition={{ duration: 0.5 }}
             className=""
           >
-            <h2 className="text-3xl text-white font-bold my-4">
+            <h2 className="text-2xl sm:text-3xl text-white font-bold my-4">
               {aboutData.college.name}
             </h2>
-            <p className="text-white/50 mb-4 text-justify">
+            <p className="text-white/50 mb-4 text-justify text-sm sm:text-base">
               {aboutData.college.description}
             </p>
           </motion.section>
@@ -46,10 +46,10 @@ export default function AboutUsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl text-white font-bold my-4">
+            <h2 className="text-2xl sm:text-3xl text-white font-bold my-4">
               {aboutData.department.name}
             </h2>
-            <p className="text-white/50 mb-4 text-justify">
+            <p className="text-white/50 mb-4 text-justify text-sm sm:text-base">
               {aboutData.department.description}
             </p>
           </motion.section>

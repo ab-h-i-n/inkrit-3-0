@@ -37,14 +37,14 @@ const EventsSection = () => {
 
   return (
     <section
-      style={{
-        backgroundImage: `url(${
-          activeEvent?.poster ?? "/assets/allEvents-bg.jpg"
-        })`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-      className="pb-[5%] h-[380dvh] text-white font-poppinsRegular pt-20 bg-black/70 backdrop-blur-md z-[50] relative"
+      // style={{
+      //   backgroundImage: `url(${
+      //     activeEvent?.poster ?? "/assets/allEvents-bg.jpg"
+      //   })`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      // }}
+      className="pb-[5%] h-[400dvh] text-white font-poppinsRegular pt-20 bg-black/70 backdrop-blur-md z-[50] relative"
     >
       <div className="absolute z-[0] w-screen h-full top-0 left-0 bg-black/80 backdrop-blur-md" />
       <div className="sticky top-[60px] left-0 h-screen sm:grid sm:grid-rows-[min-content,1fr]">
@@ -65,15 +65,13 @@ const EventsSection = () => {
           ) : (
             <motion.div
               
-              initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              initial={{ opacity: 0, y: 50}}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ amount: 0.5 }}
-              exit={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+              exit={{ opacity: 0, y: 50}}
               transition={{
-                duration: 0.5,
+                duration: 0.2,
                 stiffness: 500,
-                damping: 20,
-                type: "spring",
               }}
               className="grid place-content-center h-full sm:pt-40"
             >
@@ -101,10 +99,10 @@ const EventsSection = () => {
       <div className="absolute top-[40%]" ref={firstRef}></div>
 
       {/* indicator 2  */}
-      <div className="absolute top-[60%] text-white" ref={secondtRef}></div>
+      <div className="absolute top-[50%] text-white" ref={secondtRef}></div>
 
       {/* indicator 3  */}
-      <div className="absolute top-[80%] text-white" ref={thirdRef}></div>
+      <div className="absolute top-[70%] text-white" ref={thirdRef}></div>
     </section>
   );
 };

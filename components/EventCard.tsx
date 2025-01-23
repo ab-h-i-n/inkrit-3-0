@@ -13,29 +13,25 @@ function EventCard({ event }: { event: Event }) {
       <motion.div
         onClick={() => router.push(`/events/${event.id}`)}
         className="relative h-[270px] sm:h-[450px] aspect-[3.8/5] rounded overflow-hidden cursor-pointer"
-        initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ amount: 0.5 }}
-        exit={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        exit={{ opacity: 0, y: 50 }}
         transition={{
           duration: 0.5,
           stiffness: 500,
-          damping: 20,
-          type: "spring",
         }}
       >
         <Image src={event.poster} alt={event.title} fill />
       </motion.div>
       <motion.div
         className="pt-5 grid justify-items-center sm:place-content-center"
-        initial={{ opacity: 0, y: 50, filter: "blur(10px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        exit={{ opacity: 0, y: 50, filter: "blur(10px)" }}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 50 }}
         transition={{
-          duration: 0.5,
+          duration: 0.2,
           stiffness: 500,
-          damping: 20,
-          type: "spring",
           delay: 0.2,
         }}
       >

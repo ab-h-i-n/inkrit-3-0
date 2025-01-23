@@ -13,15 +13,8 @@ export default function Home() {
   return (
     <main
       ref={pageRef}
-      className="min-h-screen w-screen overlfow-x-hidden bg-gradient-to-tr from-black to-[#1d024f] relative"
+      className="min-h-screen w-screen overlfow-x-hidden magicpattern relative"
     >
-      <Particles
-        className="absolute inset-0 z-0"
-        quantity={100}
-        ease={80}
-        color={"#fff"}
-        refresh
-      />
       <AbstractImage pageRef={pageRef} />
       <HeroSection />
       <EventsSection />

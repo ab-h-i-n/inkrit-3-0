@@ -31,7 +31,7 @@ export default async function EventDetailsPage({ params }: { params: { id: strin
   return (
     <main className="min-h-screen bg-black divide-y divide-white font-poppinsRegular relative">
       <div className="w-full h-[300px] text-white flex justify-center items-center">
-        <Link href={"/"}>
+        <Link href={"/events"}>
           <span className="font-ahsing text-5xl relative">
             <BoxReveal boxColor="white">
               <span>{event.title}</span>
