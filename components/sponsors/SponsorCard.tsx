@@ -19,7 +19,7 @@ export default function SponsorCard({ sponsor, onClick }: SponsorCardProps) {
     >
       <div className="relative h-32 mb-4">
         <Image
-          src={sponsor.logo}
+          src={sponsor.logo.url}
           alt={sponsor.name}
           fill
           className="object-contain"
