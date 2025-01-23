@@ -104,10 +104,10 @@ export default async function EventDetailsPage({
           </BoxReveal>
         </div>
         <Link
-          href={event.registrationLink}
+          href={event.registrationLink ?? ""}
           className="border border-white text-white w-full p-3 flex justify-center"
         >
-          Register Now {event.entryFee ? `(₹${event.entryFee})` : ""}
+          {event.registrationLink ? 'Register Now' : "Spot Registration"} {event.entryFee ? `(₹${event.entryFee})` : ""}
         </Link>
       </div>
     </main>

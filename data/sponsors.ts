@@ -1,13 +1,26 @@
+import { client } from "@/sanity/lib/client";
+import { unstable_cache } from "next/cache";
+
 export interface Sponsor {
   id: string;
   name: string;
-  logo: string;
-  description: string;
+  logo: {
+    url : string
+  };
   website: string;
-  type: string;
-  tier: string;
 }
 
-export const sponsors: Sponsor[] = [
-  
-];
+export const fetchSponsors = unstable_cache(
+  async () => {
+    return await client.fetch(`*[_type == "sponsor"]{
+        ...,
+      logo {
+        "url": asset->url
+      }
+        }`);
+  },
+  ["sponsors"],
+  {
+    tags: ["sponsors"],
+  }
+);

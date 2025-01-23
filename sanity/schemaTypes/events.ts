@@ -128,7 +128,6 @@ export default {
       type: "url",
       title: "Registration Link",
       description: "URL for registration.",
-      validation: (Rule: { required: () => any }) => Rule.required(),
     },
     {
       name: "rules",

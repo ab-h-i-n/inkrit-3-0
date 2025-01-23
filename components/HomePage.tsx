@@ -8,8 +8,9 @@ import SponsorSection from "@/components/SponsorSection";
 import ContactUsSection from "@/components/ContactUsSection";
 import AboutUsSection from "@/components/AboutUsSection";
 import { Event } from "@/data/events";
+import { Sponsor } from "@/data/sponsors";
 
-export default function Home({ events } : { events : Event[]}) {
+export default function Home({ events , sponsors } : { events : Event[] , sponsors : Sponsor[]}) {
   const pageRef = React.useRef(null);
   return (
     <main
@@ -20,7 +21,7 @@ export default function Home({ events } : { events : Event[]}) {
       <HeroSection />
       <EventsSection events={events} />
       <AboutUsSection />
-      <SponsorSection />
+      <SponsorSection sponsors={sponsors} />
       <ContactUsSection />
 
       {/* <Menu /> */}
