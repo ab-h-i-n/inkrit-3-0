@@ -1,11 +1,12 @@
 import BoxReveal from "@/components/ui/box-reveal";
-import { events } from "@/data/events";
+import { Event, fetchEvents } from "@/data/events";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const page = () => {
+const page = async() => {
+  const events = await fetchEvents();
   return (
     <div className="bg-black min-h-screen pt-[80px] px-[7.5%] pb-20">
       <Link href={"/"} className=" flex justify-center">
@@ -18,11 +19,11 @@ const page = () => {
         </Link>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-x-10 sm:gap-y-14 mt-10">
-        {events.map((event, index) => (
+        {events.map((event : Event, index : number) => (
           <Link href={`/events/${event.id}`} key={index} className="grid gap-4">
             <div className="flex justify-center items-center relative w-full aspect-[4/5]">
               <Image
-                src={event.poster}
+                src={event.poster.url}
                 alt={event.title}
                 fill
                 className="w-full h-full object-cover"

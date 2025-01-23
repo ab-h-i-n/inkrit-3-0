@@ -2,13 +2,13 @@
 import React, { useEffect, useState } from "react";
 import EventCard from "./EventCard";
 import BoxReveal from "./ui/box-reveal";
-import { Event, events } from "@/data/events";
+import { Event } from "@/data/events";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
-const EventsSection = () => {
+const EventsSection = ({ events } : { events : Event[] }) => {
   const [activeEvent, setActiveEvent] = useState<Event | null>(events[0]);
   const [eventsCompleted, setEventsCompleted] = useState(false);
   const { inView: firstInView, ref: firstRef } = useInView();

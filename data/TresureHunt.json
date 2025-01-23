@@ -1,0 +1,31 @@
+{
+    "id": "treasure-hunt",
+    "title": "Treasure Hunt",
+    "poster": "/posters/treasure-hunt.png",
+    "description":
+      "Join the ultimate Treasure Hunt at Inkrit 3.0 and unleash your inner explorer! Navigate through riddles, solve puzzles, and uncover clues as you race against the clock to find the hidden treasure. It's a thrilling adventure that will test your wit, teamwork, and strategy in a quest for glory.",
+    "date": "07 February 2025",
+    "time": "2:00 PM",
+    "entryFee": 150,
+    "prizePool": 3000,
+    "eventCoordinators": [
+      { "name": "Nida H B", "phone": "+91 9567891234" },
+      { "name": "Salman K", "phone": "+91 9876543210" }
+    ],
+    "staffCoordinators": [
+      { "name": "Prof. Iqbal P", "phone": "+91 9447012345" },
+      { "name": "Dr. Sameera S", "phone": "+91 9876512345" }
+    ],
+    "registrationLink":
+      "https://docs.google.com/forms/d/e/1FAIpQLSdNnVlbSTN1_6Nl4D2dFwP1ICswQ0KFOuvZZU6bAekEvA5OTw/viewform?usp=header",
+    "rules": [
+      "Teams of up to four participants are allowed.",
+      "Each team will receive a set of clues at the start of the game.",
+      "Teams must solve each clue to progress to the next location.",
+      "The hunt is time-bound; the maximum duration is 2 hours.",
+      "The team that finds the treasure first wins.",
+      "Second prize will be given to the team completing the hunt second.",
+      "No use of mobile devices or external help is allowed during the game."
+    ]
+  }
+  

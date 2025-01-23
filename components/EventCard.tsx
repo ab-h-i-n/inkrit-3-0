@@ -22,7 +22,7 @@ function EventCard({ event }: { event: Event }) {
           stiffness: 500,
         }}
       >
-        <Image src={event.poster} alt={event.title} fill />
+        <Image src={event.poster.url} alt={event.title} fill />
       </motion.div>
       <motion.div
         className="pt-5 grid justify-items-center sm:place-content-center"
