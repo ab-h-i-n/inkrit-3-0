@@ -88,11 +88,11 @@ export default async function EventDetailsPage({
               ))}
             </div>
           </BoxReveal>
-          {event.staffCoordinators.length > 0 && (
+          {event?.staffCoordinators && (
             <BoxReveal boxColor="white">
               <>
                 <h4 className="text-xl font-bold pt-10">Staff Coordinators</h4>
-                {event.staffCoordinators.map((coordinator: Coordinator) => (
+                {event?.staffCoordinators?.map((coordinator: Coordinator) => (
                   <Link
                     href={`tel:${coordinator.phone}`}
                     key={coordinator.phone}
