@@ -1,7 +1,7 @@
 import { Coordinator, fetchEvents } from "@/data/events";
 import Menu from "@/components/Menu";
 import Link from "next/link";
-import {  ChevronLeft } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import BoxReveal from "@/components/ui/box-reveal";
 
 export default async function EventDetailsPage({
@@ -88,26 +88,29 @@ export default async function EventDetailsPage({
               ))}
             </div>
           </BoxReveal>
-          <BoxReveal boxColor="white">
-            <>
-              <h4 className="text-xl font-bold pt-10">Staff Coordinators</h4>
-              {event.staffCoordinators.map((coordinator: Coordinator) => (
-                <Link
-                  href={`tel:${coordinator.phone}`}
-                  key={coordinator.phone}
-                  className="block text-white/70"
-                >
-                  {coordinator.name} - {coordinator.phone}
-                </Link>
-              ))}
-            </>
-          </BoxReveal>
+          {event.staffCoordinators.length > 0 && (
+            <BoxReveal boxColor="white">
+              <>
+                <h4 className="text-xl font-bold pt-10">Staff Coordinators</h4>
+                {event.staffCoordinators.map((coordinator: Coordinator) => (
+                  <Link
+                    href={`tel:${coordinator.phone}`}
+                    key={coordinator.phone}
+                    className="block text-white/70"
+                  >
+                    {coordinator.name} - {coordinator.phone}
+                  </Link>
+                ))}
+              </>
+            </BoxReveal>
+          )}
         </div>
         <Link
           href={event.registrationLink ?? ""}
           className="border border-white text-white w-full p-3 flex justify-center"
         >
-          {event.registrationLink ? 'Register Now' : "Spot Registration"} {event.entryFee ? `(₹${event.entryFee})` : ""}
+          {event.registrationLink ? "Register Now" : "Spot Registration"}{" "}
+          {event.entryFee ? `(₹${event.entryFee})` : ""}
         </Link>
       </div>
     </main>

@@ -110,14 +110,12 @@ export default {
             {
               name: "name",
               type: "string",
-              title: "Name",
-              validation: (Rule: { required: () => any }) => Rule.required(),
+              title: "Name"
             },
             {
               name: "phone",
               type: "string",
-              title: "Phone Number",
-              validation: (Rule: { required: () => any }) => Rule.required(),
+              title: "Phone Number"
             },
           ],
         },
